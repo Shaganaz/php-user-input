@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "db_connect.php"; // Include database connection
+include "db_connect.php"; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
@@ -19,9 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verify password
         if (password_verify($password, $hashed_password)) {
             $_SESSION["user_id"] = $id;
-            $_SESSION["username"] = $username;  // ✅ Store username in session
+            $_SESSION["username"] = $username; 
             
-            header("Location: dashboard.php"); // Redirect to dashboard
+            header("Location: dashboard.php"); 
             exit();
         } else {
             echo "Invalid email or password.";
