@@ -1,15 +1,14 @@
 <?php
-$servername="localhost";
-$username="phuser";
-$password="PhpUser@123";
-$dbname="user_auth";
+class DB {
+    public $conn;
 
-$conn=new mysqli($servername,$username,$password,$dbname);
-if($conn->connect_error)
-{
-  die("connection failed: " .$conn->connect_error);
-}else 
-{
- echo "connected successfully!";
+    public function __construct() {
+        $this->conn = new mysqli("localhost", "phuser", "PhpUser@123", "user_auth");
+
+        if ($this->conn->connect_error) {
+            die("Connection failed: " . $this->conn->connect_error);
+        }
+    }
 }
 ?>
+

@@ -1,0 +1,1 @@
+http://localhost/reset_password.php?token=cc22a24d5068f70e1d71e02e5acf2615752de7d47bd748f8942deb37becd9f5f1d3564d5be024bab6f8c5362c3ec18645c06
